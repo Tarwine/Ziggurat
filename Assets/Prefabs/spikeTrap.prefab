@@ -11,6 +11,7 @@ GameObject:
   - 65: {fileID: 6500002}
   - 114: {fileID: 11400000}
   - 95: {fileID: 9500000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: spikes
   m_TagString: Untagged
@@ -193,7 +194,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
-  m_LocalPosition: {x: -8.90706444, y: 0, z: .282103539}
+  m_LocalPosition: {x: .413304329, y: 0, z: .294249535}
   m_LocalScale: {x: 2, y: 1, z: 2}
   m_Children:
   - {fileID: 400000}
@@ -496,6 +497,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 247e125f9d26e174bad1f1cb719840be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3305a2411da86469d4c63d08f63409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFading: 0
+  times: 0
+  hurtSound: {fileID: 8300000, guid: 0e2cea20f917da349979a44826f8e062, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
