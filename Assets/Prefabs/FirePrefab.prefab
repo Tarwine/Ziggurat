@@ -64,11 +64,11 @@ GameObject:
   - 4: {fileID: 400006}
   - 65: {fileID: 6500000}
   - 54: {fileID: 5400000}
-  - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
   - 65: {fileID: 6500002}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400006}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: FirePrefab
   m_TagString: Untagged
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d6b2e72dc40b4aa9b3e1f5e7469e872, type: 3}
+  m_Script: {fileID: 11500000, guid: 90a1fe909ecb5b64a9eea79f27db5e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11400002
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18a2fbb1f2a5646bab217546533fe680, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e3305a2411da86469d4c63d08f63409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isFading: 0
@@ -458,11 +458,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f92dae11cd7a7964e9803be3663cfe93, type: 3}
+  m_Script: {fileID: 11500000, guid: 74b11013a9e06e74ebef0620d4d533df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFading: 0
-  times: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -471,9 +469,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83da69462c75eda4baafa0948934b542, type: 3}
+  m_Script: {fileID: 11500000, guid: 969d50174bef2274ab18542456b8c3e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFading: 0
+  times: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -112,7 +112,7 @@ public class axeBehaviour : MonoBehaviour
 			
 			//m_CurrentScreenOverlayColor = new Color(1,0,0,0.5f);
 			StartFade (Color.red, 3.0f);
-			Vector3 pushforce = new Vector3(-1,0,0);
+			Vector3 pushforce = other.transform.forward * -1;
 			other.SendMessage("SetVelocity", pushforce * 20.0f);
 
 

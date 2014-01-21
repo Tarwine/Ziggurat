@@ -105,7 +105,7 @@ public class FadeToRed : MonoBehaviour
 			m_CurrentScreenOverlayColor = new Color(1,0,0,0.5f);
 			StartFade (Color.clear, 3.0f);
 			Debug.Log ("BOOGABOOGA");
-			StartCoroutine("FadeRed");
+			//StartCoroutine("FadeRed");
 			isFading = true;
 		}
 	}
