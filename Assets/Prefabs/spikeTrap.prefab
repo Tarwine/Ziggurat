@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 65: {fileID: 6500002}
   - 114: {fileID: 11400000}
+  - 95: {fileID: 9500000}
   m_Layer: 0
   m_Name: spikes
   m_TagString: Untagged
@@ -192,7 +193,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
-  m_LocalPosition: {x: .413304329, y: 0, z: .294249535}
+  m_LocalPosition: {x: -8.90706444, y: 0, z: .282103539}
   m_LocalScale: {x: 2, y: 1, z: 2}
   m_Children:
   - {fileID: 400000}
@@ -400,6 +401,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.60000002, y: 1, z: 2}
   m_Center: {x: -1.20000005, y: 0, z: -.5}
+--- !u!95 &9500000
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49455f3496833a14aae116f3e80d454b, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!95 &9500002
 Animator:
   serializedVersion: 2

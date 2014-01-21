@@ -22,7 +22,8 @@ public class Level6 : MonoBehaviour {
 			for (int j = 0; j < gridSize; j++) {
 				grid[i, j] = (GameObject)Instantiate(PlatformPrefab, new Vector3(i * size, 0, j * size), transform.rotation);
 				grid[i, j].AddComponent<Level6Platforms>();
-				Destroy (grid[i, j].GetComponent<tileFallingBehavior>());
+				grid[i, j].AddComponent<Level6Platforms>();
+				//Destroy (grid[i, j].GetComponent<tileFallingBehavior>());
 			}
 		}
 

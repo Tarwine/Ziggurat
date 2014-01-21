@@ -5,6 +5,7 @@ public class Level6Platforms : MonoBehaviour {
 
 	GameObject GameManager;
 	private Vector3 explosion;
+	private float time = 0.0f;
 	private bool isRigid = false;
 
 	// Use this for initialization
@@ -17,7 +18,12 @@ public class Level6Platforms : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if(isRigid == true){
+			time += Time.deltaTime;
+			if(time > 3.5f){
+				Destroy(gameObject);
+			}
+		}
 	}
 
 	void OnTriggerEnter(Collider other) {
@@ -30,6 +36,7 @@ public class Level6Platforms : MonoBehaviour {
 	public void Fall() {
 		Debug.Log ("Woo!");
 		if(isRigid == false){
+		this.audio.Play();
 		this.gameObject.AddComponent<Rigidbody>();
 		this.rigidbody.useGravity = true;
 		this.gameObject.rigidbody.AddTorque(explosion);

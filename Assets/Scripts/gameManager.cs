@@ -29,7 +29,7 @@ public class gameManager : MonoBehaviour {
 		}
 	}
 	void OnApplicationQuit(){
-		Debug.Log("quitted");
+		Debug.Log("Application Quit");
 		PlayerPrefs.SetFloat ("PlayerX", GameObject.Find("spawn").transform.position.x);
 		PlayerPrefs.SetFloat ("PlayerY", GameObject.Find("spawn").transform.position.y);
 		PlayerPrefs.SetFloat ("PlayerZ", GameObject.Find("spawn").transform.position.z);

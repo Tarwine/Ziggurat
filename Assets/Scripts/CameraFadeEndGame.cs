@@ -4,10 +4,9 @@
 
 //Found on Wiki Unity
 using UnityEngine;
-using System.Collections;
 
 
-public class FadeToRed : MonoBehaviour
+public class CameraFadeEndGame : MonoBehaviour
 {   
 	private GUIStyle m_BackgroundStyle = new GUIStyle();		// Style for background tiling
 	private Texture2D m_FadeTexture;				// 1x1 pixel texture used for fading
@@ -17,7 +16,6 @@ public class FadeToRed : MonoBehaviour
 	private int m_FadeGUIDepth = -1000;				// make sure this texture is drawn on top of everything
 	public bool isFading = false;
 	public float times = 0;
-	public AudioClip hurtSound;
 	
 	// initialize the texture, background-style and initial color:
 	private void Awake()
@@ -31,22 +29,22 @@ public class FadeToRed : MonoBehaviour
 		//SetScreenOverlayColor(new Color(0,0,0,1));
 		//StartFade(new Color(1,0,0,1), 5);
 	}
-	
-	void Update(){
+
+	 void Update(){
 		if(isFading == true){
 			times += Time.deltaTime;
 		}
 		//Debug.Log("duh");
 		if(times > 3.0f){
-		//	Debug.Log ("WE HAVE ARRIVED");
-			//Application.LoadLevel("towerFloor1");
+			Debug.Log ("WE HAVE ARRIVED");
+			Application.Quit ();
 		}
 	}
 	
 	// draw the texture and perform the fade:
 	private void OnGUI()
 	{   
-		// if the current color of the screen is not equal to the desired color: keep fading!
+		// if the current color of the screen is not equal ato the desired color: keep fading!
 		if (m_CurrentScreenOverlayColor != m_TargetScreenOverlayColor)
 		{			
 			// if the difference between the current alpha and the desired alpha is smaller than delta-alpha * deltaTime, then we're pretty much done fading:
@@ -94,32 +92,20 @@ public class FadeToRed : MonoBehaviour
 			m_TargetScreenOverlayColor = newScreenOverlayColor;
 			m_DeltaColor = (m_TargetScreenOverlayColor - m_CurrentScreenOverlayColor) / fadeDuration;
 		}
+
+	}
+
+	public void OnTriggerEnter(Collider other){
+
+		if(other.gameObject.tag == "Player"){
+			Debug.Log ("THE THING");
+			StartFade (Color.black, 3.5f);
+			isFading = true;
+			PlayerPrefs.SetFloat ("PlayerX", GameObject.Find("spawn").transform.position.x);
+			PlayerPrefs.SetFloat ("PlayerY", GameObject.Find("spawn").transform.position.y);
+			PlayerPrefs.SetFloat ("PlayerZ", GameObject.Find("spawn").transform.position.z);
+			PlayerPrefs.SetString("isDead", "false");
+		}
 		
 	}
-	
-	public void OnTriggerEnter(Collider other){
-	//	Debug.Log ("THE THING");
-
-
-		if(other.tag == "Player"){
-
-			m_CurrentScreenOverlayColor = new Color(1,0,0,0.5f);
-			StartFade (Color.clear, 3.0f);
-			Debug.Log ("BOOGABOOGA");
-			other.audio.PlayOneShot(hurtSound);
-			//StartCoroutine("FadeRed");
-			isFading = true;
-		}
-	}
-
-	/*IEnumerator FadeRed() {
-		Debug.Log ("poop");
-
-		StartFade (Color.clear, 0.1f);
-
-			yield return new WaitForSeconds(0.5f);
-
-	}*/
-
-
 }

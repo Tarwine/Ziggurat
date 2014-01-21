@@ -11,8 +11,8 @@ public class SetPiece : MonoBehaviour {
 	public GameObject floor;
 
 	public float timeBetweenFire = 3;
-	bool isRockEvent;
-	float timer;
+	public bool isRockEvent;
+	public float timer;
 	// Use this for initialization
 	void Start () {
 
@@ -27,15 +27,16 @@ public class SetPiece : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (transform.position.y >= 59.5 && !hasWaited) {
+			Debug.Log("Waiting");
 			waitForPlayer = true;
 			hasWaited = true;
 			rigidbody.velocity = Vector3.zero;
 		}
 		if (transform.position.y >= 95) {
-			rigidbody.useGravity = true;
+			//rigidbody.useGravity = true;
 			rigidbody.velocity = Vector3.zero;
-			rigidbody.AddForce(Vector3.down * 50);
-			rigidbody.freezeRotation = false;
+			//rigidbody.AddForce(Vector3.down * 50);
+			//rigidbody.freezeRotation = false;
 			Destroy (this.GetComponent<SetPiece>());
 		}
 
@@ -50,7 +51,7 @@ public class SetPiece : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		if (waitForPlayer) {
+		if (waitForPlayer && other.tag == "Player") {
 			waitForPlayer = false;
 			rigidbody.AddForce(Vector3.up * 10000);
 			if (transform.position.y < 5) {
@@ -58,9 +59,20 @@ public class SetPiece : MonoBehaviour {
 				Destroy (floor.gameObject);
 			}
 			else {
-				isRockEvent = true;
-				StartCoroutine("RockEvent");
+				//isRockEvent = true;
+				//StartCoroutine("RockEvent");
 			}
+		}
+	}
+	void OnTriggerExit(Collider other) {
+		if(other.tag == "Player"){
+			waitForPlayer = false;
+			hasWaited = true;
+			isRockEvent = true;
+			//StartCoroutine("RockEvent");
+			Debug.Log("Player Exited");
+			rigidbody.AddForce(Vector3.up * 10000);
+
 		}
 	}
 
@@ -80,10 +92,10 @@ public class SetPiece : MonoBehaviour {
 		yield return new WaitForSeconds(timeBetweenFire);
 		Instantiate(Fire, new Vector3(0, transform.position.y + 2, -4), transform.rotation);
 		yield return new WaitForSeconds(timeBetweenFire);
-		Instantiate(Fire, new Vector3(0, transform.position.y + 2, 0), transform.rotation);
-		yield return new WaitForSeconds(timeBetweenFire);
-		Instantiate(Fire, new Vector3(0, transform.position.y + 2, 4), transform.rotation);
-		yield return new WaitForSeconds(timeBetweenFire);
+		//Instantiate(Fire, new Vector3(0, transform.position.y + 2, 0), transform.rotation);
+		//yield return new WaitForSeconds(timeBetweenFire);
+		//Instantiate(Fire, new Vector3(0, transform.position.y + 2, 4), transform.rotation);
+		//yield return new WaitForSeconds(timeBetweenFire);
 	}
 	IEnumerator RockEvent() {
 

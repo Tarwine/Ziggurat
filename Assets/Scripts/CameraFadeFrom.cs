@@ -91,7 +91,7 @@ public class CameraFadeFrom : MonoBehaviour
 	}
 	
 	public void OnTriggerEnter(){
-		Debug.Log ("THE THING");
+//		Debug.Log ("THE THING");
 		StartFade (Color.clear, 10.0f);
 		isFading = true;
 		PlayerPrefs.SetString("isDead", "false");

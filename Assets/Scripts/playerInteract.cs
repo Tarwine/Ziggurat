@@ -7,10 +7,12 @@ public class playerInteract : MonoBehaviour {
 	public string usingAxis;
 	private bool ropeRange;
 	private bool holding;
-	private bool isGrounded = true;
+	public bool isGrounded = true;
 	private float timez;
 	private float deadTime;
 	public bool isdead;
+	public AudioClip deathSound;
+	private bool deathSoundPlayed = false;
 
 	// Use this for initialization
 	void Start () {
@@ -42,8 +44,12 @@ public class playerInteract : MonoBehaviour {
 			timez += Time.deltaTime;
 		}
 		if(isGrounded || holding){
-			if(timez > 1.5f){
+			if(timez > 1.5f && !holding){
 				isdead = true;
+				if(!deathSoundPlayed){
+					audio.PlayOneShot(deathSound);
+					deathSoundPlayed = true;
+				}
 				PlayerPrefs.SetString("isDead", "true");
 			}else{
 				timez = 0;
