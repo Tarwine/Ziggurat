@@ -37,6 +37,10 @@ public class CameraFadeEndGame : MonoBehaviour
 		//Debug.Log("duh");
 		if(times > 5.0f){
 			Debug.Log ("WE HAVE ARRIVED");
+			PlayerPrefs.SetFloat ("PlayerX", GameObject.Find("spawn").transform.position.x);
+			PlayerPrefs.SetFloat ("PlayerY", GameObject.Find("spawn").transform.position.y);
+			PlayerPrefs.SetFloat ("PlayerZ", GameObject.Find("spawn").transform.position.z);
+			PlayerPrefs.SetString("isDead", "false");
 			Application.Quit ();
 		}
 	}
@@ -101,10 +105,7 @@ public class CameraFadeEndGame : MonoBehaviour
 			Debug.Log ("THE THING");
 			StartFade (Color.black, 10.0f);
 			isFading = true;
-			PlayerPrefs.SetFloat ("PlayerX", GameObject.Find("spawn").transform.position.x);
-			PlayerPrefs.SetFloat ("PlayerY", GameObject.Find("spawn").transform.position.y);
-			PlayerPrefs.SetFloat ("PlayerZ", GameObject.Find("spawn").transform.position.z);
-			PlayerPrefs.SetString("isDead", "false");
+
 		}
 		
 	}
