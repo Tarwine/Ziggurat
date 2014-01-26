@@ -35,7 +35,7 @@ public class CameraFadeEndGame : MonoBehaviour
 			times += Time.deltaTime;
 		}
 		//Debug.Log("duh");
-		if(times > 3.0f){
+		if(times > 5.0f){
 			Debug.Log ("WE HAVE ARRIVED");
 			Application.Quit ();
 		}
@@ -99,7 +99,7 @@ public class CameraFadeEndGame : MonoBehaviour
 
 		if(other.gameObject.tag == "Player"){
 			Debug.Log ("THE THING");
-			StartFade (Color.black, 3.5f);
+			StartFade (Color.black, 10.0f);
 			isFading = true;
 			PlayerPrefs.SetFloat ("PlayerX", GameObject.Find("spawn").transform.position.x);
 			PlayerPrefs.SetFloat ("PlayerY", GameObject.Find("spawn").transform.position.y);
