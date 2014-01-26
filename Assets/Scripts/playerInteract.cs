@@ -72,14 +72,14 @@ public class playerInteract : MonoBehaviour {
 			this.transform.position = grabbedRope.transform.position + (grabbedRope.transform.forward + new Vector3(0.0f, -1.5f, 0.0f));
 		}
 
-		if(Input.GetKey(KeyCode.W) && holding == true && grabbedRope.rigidbody.velocity.magnitude < 12.0f){
+		if((Input.GetKey(KeyCode.W) || Input.GetAxis("Vertical") > 0.0f) && holding == true && grabbedRope.rigidbody.velocity.magnitude < 12.0f){
 			grabbedRope.rigidbody.AddForce(transform.forward * 15);
 			Debug.Log(grabbedRope.rigidbody.velocity.magnitude);
 		}
-		if(Input.GetKey(KeyCode.S) && holding == true && grabbedRope.rigidbody.velocity.magnitude < 12.0f){
+		if((Input.GetKey(KeyCode.S) || Input.GetAxis("Vertical") < 0.0f) && holding == true && grabbedRope.rigidbody.velocity.magnitude < 12.0f){
 			grabbedRope.rigidbody.AddForce(-transform.forward * 15);
 		}
-		if(Input.GetKeyDown(KeyCode.E)){
+		if(Input.GetKeyDown(KeyCode.E) || Input.GetAxis("Triggers") < 0.0f){
 			if(ropeRange == true && holding == false){
 				grabbedRope = closestRope;
 				holding = true;
@@ -87,7 +87,7 @@ public class playerInteract : MonoBehaviour {
 			}
 
 		}
-		if(Input.GetKeyUp(KeyCode.E)){
+		if(Input.GetKeyUp(KeyCode.E) || Input.GetAxis("Triggers") == 0.0f){
 			if(holding == true){
 				grabbedRope = null;
 				holding = false;
