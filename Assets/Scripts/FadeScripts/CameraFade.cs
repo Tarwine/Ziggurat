@@ -15,7 +15,8 @@ public class CameraFade : MonoBehaviour
 	private Color m_DeltaColor = new Color(0,0,0,0);		// the delta-color is basically the "speed / second" at which the current color should change
 	private int m_FadeGUIDepth = -1000;				// make sure this texture is drawn on top of everything
 	public bool isFading = false;
-	public float times = 0;
+	public float times = 0.0f;
+	public float fadeTime;
 	
 	// initialize the texture, background-style and initial color:
 	private void Awake()
@@ -99,7 +100,7 @@ public class CameraFade : MonoBehaviour
 
 		if(other.gameObject.tag == "Player"){
 			Debug.Log ("THE THING");
-			StartFade (Color.black, 3.5f);
+			StartFade (Color.black, fadeTime);
 			isFading = true;
 			PlayerPrefs.SetFloat ("PlayerX", GameObject.Find("spawn").transform.position.x);
 			PlayerPrefs.SetFloat ("PlayerY", GameObject.Find("spawn").transform.position.y);
