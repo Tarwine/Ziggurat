@@ -12965,6 +12965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFading: 0
   times: 0
+  fadeTime: 0
 --- !u!1 &991543016
 GameObject:
   m_ObjectHideFlags: 0
@@ -15475,6 +15476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFading: 0
   times: 0
+  fadeTime: 8
 --- !u!65 &1202271975
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1151,6 +1151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFading: 0
   times: 0
+  fadeTime: 8
 --- !u!135 &1621820587
 SphereCollider:
   m_ObjectHideFlags: 0
