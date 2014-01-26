@@ -16,7 +16,7 @@ public class CameraFade : MonoBehaviour
 	private int m_FadeGUIDepth = -1000;				// make sure this texture is drawn on top of everything
 	public bool isFading = false;
 	public float times = 0.0f;
-	public float fadeTime;
+	public float fadeTime = 10.0f;
 	
 	// initialize the texture, background-style and initial color:
 	private void Awake()
