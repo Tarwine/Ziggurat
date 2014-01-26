@@ -36,7 +36,7 @@ public class CameraFade : MonoBehaviour
 			times += Time.deltaTime;
 		}
 		//Debug.Log("duh");
-		if(times > 3.0f){
+		if(times > fadeTime - 5.0f){
 			Debug.Log ("WE HAVE ARRIVED");
 			Application.LoadLevel(Application.loadedLevel + 1);
 		}

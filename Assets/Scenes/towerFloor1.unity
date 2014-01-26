@@ -13,7 +13,7 @@ SceneSettings:
 --- !u!104 &2
 RenderSettings:
   m_Fog: 1
-  m_FogColor: {r: .345588207, g: .345588207, b: .345588207, a: 1}
+  m_FogColor: {r: .0627451017, g: .0666666701, b: .0627451017, a: 1}
   m_FogMode: 3
   m_FogDensity: .0299999993
   m_LinearFogStart: 0
