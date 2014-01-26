@@ -3271,6 +3271,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1108012329}
   - 65: {fileID: 1108012328}
+  - 114: {fileID: 1108012330}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -3285,7 +3286,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1108012327}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 75, y: 1, z: 150}
@@ -3298,9 +3299,23 @@ Transform:
   m_GameObject: {fileID: 1108012327}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.53591442, y: -35.7146378, z: 42.6696854}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.0266459, y: 1, z: 1.73193133}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1108012330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1108012327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 027bc60b73cc8064cb77e4862e42e40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFading: 0
+  times: 0
+  fadeTime: 4
 --- !u!1 &1182487951
 GameObject:
   m_ObjectHideFlags: 0
