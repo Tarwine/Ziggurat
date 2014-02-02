@@ -36,12 +36,12 @@ public class CameraFadeEndGame : MonoBehaviour
 		}
 		//Debug.Log("duh");
 		if(times > 5.0f){
-			Debug.Log ("WE HAVE ARRIVED");
+			Debug.Log ("Game has been completed");
 			PlayerPrefs.SetFloat ("PlayerX", GameObject.Find("spawn").transform.position.x);
 			PlayerPrefs.SetFloat ("PlayerY", GameObject.Find("spawn").transform.position.y);
 			PlayerPrefs.SetFloat ("PlayerZ", GameObject.Find("spawn").transform.position.z);
 			PlayerPrefs.SetString("isDead", "false");
-			Application.Quit ();
+			//Application.Quit ();
 		}
 	}
 	
