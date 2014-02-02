@@ -105,21 +105,11 @@ public class FadeToRed : MonoBehaviour
 
 			m_CurrentScreenOverlayColor = new Color(1,0,0,0.5f);
 			StartFade (Color.clear, 3.0f);
-			Debug.Log ("BOOGABOOGA");
 			other.audio.PlayOneShot(hurtSound);
 			//StartCoroutine("FadeRed");
 			isFading = true;
 		}
 	}
-
-	/*IEnumerator FadeRed() {
-		Debug.Log ("poop");
-
-		StartFade (Color.clear, 0.1f);
-
-			yield return new WaitForSeconds(0.5f);
-
-	}*/
 
 
 }

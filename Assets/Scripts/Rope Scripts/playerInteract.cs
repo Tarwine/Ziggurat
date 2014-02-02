@@ -13,6 +13,7 @@ public class playerInteract : MonoBehaviour {
 	public bool isdead;
 	public AudioClip deathSound;
 	private bool deathSoundPlayed = false;
+	private bool holdingJoy = false;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,7 @@ public class playerInteract : MonoBehaviour {
 		holding = false;
 		isdead = false;
 		timez = 0;
+		PlayerPrefs.SetString("isDead", "false");
 	}
 
 	 public bool deadReturn(){
@@ -34,8 +36,6 @@ public class playerInteract : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
-		SendMessage("somethingElse");
 
 		//The following lines of code kill the player if he is in the air too long
 		//********************
@@ -80,19 +80,59 @@ public class playerInteract : MonoBehaviour {
 			grabbedRope.rigidbody.AddForce(-transform.forward * 15);
 		}
 		if(Input.GetKeyDown(KeyCode.E) || Input.GetAxis("Triggers") < 0.0f){
+			if(Input.GetAxis("Triggers") < 0.0f){
+				holdingJoy = true;
+			}
 			if(ropeRange == true && holding == false){
 				grabbedRope = closestRope;
 				holding = true;
 				this.gameObject.GetComponentInChildren<HeadBobber>().enabled = false;
+				grabbedRope.rigidbody.AddForce(-transform.forward * 15);
 			}
 
 		}
-		if(Input.GetKeyUp(KeyCode.E) || Input.GetAxis("Triggers") == 0.0f){
+		if(Input.GetKeyUp(KeyCode.E) || (Input.GetAxis("Triggers") == 0.0f && holdingJoy)){
 			if(holding == true){
 				grabbedRope = null;
 				holding = false;
 				this.gameObject.GetComponentInChildren<HeadBobber>().enabled = true;
 				SendMessage("SetVelocity", transform.forward * 10.0f);
+			}
+		}
+		//Used to warp to checkpoints
+		if(Input.GetKeyDown(KeyCode.Alpha1)){
+			if(GameObject.Find("checkpoint1") != null){
+				PlayerPrefs.SetString ("isDead", "true");
+				GameObject.Find("checkpoint1").GetComponent<checkPointBehavior>().manualSave();
+				Application.LoadLevel(Application.loadedLevel);
+			}
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha2)){
+			if(GameObject.Find("checkpoint2") != null){
+				PlayerPrefs.SetString ("isDead", "true");
+				GameObject.Find("checkpoint2").GetComponent<checkPointBehavior>().manualSave();
+				Application.LoadLevel(Application.loadedLevel);
+			}
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha3)){
+			if(GameObject.Find("checkpoint3") != null){
+				PlayerPrefs.SetString ("isDead", "true");
+				GameObject.Find("checkpoint3").GetComponent<checkPointBehavior>().manualSave();
+				Application.LoadLevel(Application.loadedLevel);
+			}
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha4)){
+			if(GameObject.Find("checkpoint4") != null){
+				PlayerPrefs.SetString ("isDead", "true");
+				GameObject.Find("checkpoint4").GetComponent<checkPointBehavior>().manualSave();
+				Application.LoadLevel(Application.loadedLevel);
+			}
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha5)){
+			if(GameObject.Find("checkpoint5") != null){
+				PlayerPrefs.SetString ("isDead", "true");
+				GameObject.Find("checkpoint5").GetComponent<checkPointBehavior>().manualSave();
+				Application.LoadLevel(Application.loadedLevel);
 			}
 		}
 	}

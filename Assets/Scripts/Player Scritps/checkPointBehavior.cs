@@ -7,7 +7,7 @@ public class checkPointBehavior : MonoBehaviour {
 	void Start () {
 	
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 	
@@ -19,6 +19,12 @@ public class checkPointBehavior : MonoBehaviour {
 		PlayerPrefs.SetFloat ("PlayerX", this.transform.position.x);
 		PlayerPrefs.SetFloat ("PlayerY", this.transform.position.y);
 		PlayerPrefs.SetFloat ("PlayerZ", this.transform.position.z);
-		Debug.Log ("SAVED LOCATIONS");
+		Debug.Log ("Saved Checkpoint");
+	}
+	public void manualSave(){
+		PlayerPrefs.SetFloat ("PlayerX", this.transform.position.x);
+		PlayerPrefs.SetFloat ("PlayerY", this.transform.position.y);
+		PlayerPrefs.SetFloat ("PlayerZ", this.transform.position.z);
+		Debug.Log ("Manually Saved Checkpoint");
 	}
 }

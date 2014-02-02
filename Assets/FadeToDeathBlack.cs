@@ -37,7 +37,8 @@ public class FadeToDeathBlack : MonoBehaviour
 		}
 		//Debug.Log("duh");
 		if(times > fadeTime){
-			Debug.Log ("WE HAVE ARRIVED");
+			Debug.Log ("Reloading Level");
+			PlayerPrefs.SetString("isDead", "true");
 			Application.LoadLevel(Application.loadedLevel);
 		}
 	}
@@ -100,7 +101,7 @@ public class FadeToDeathBlack : MonoBehaviour
 		
 		if(other.gameObject.tag == "Player"){
 			isFading = true;
-			Debug.Log ("THE THING");
+			Debug.Log ("Entered Death Area");
 			StartFade (Color.black, fadeTime);
 			/*PlayerPrefs.SetFloat ("PlayerX", GameObject.Find("spawn").transform.position.x);
 			PlayerPrefs.SetFloat ("PlayerY", GameObject.Find("spawn").transform.position.y);

@@ -8,10 +8,12 @@ public class gameManager : MonoBehaviour {
 	void Start () {
 
 		if(PlayerPrefs.GetString("isDead") == "true"){
+			Debug.Log ("Player has died, respawn at checkpoint");
 			GameObject.FindWithTag("Player").transform.position = new Vector3(PlayerPrefs.GetFloat ("PlayerX"), PlayerPrefs.GetFloat ("PlayerY"), PlayerPrefs.GetFloat ("PlayerZ"));
 
 		}
 		else{
+			Debug.Log ("Player hasn't died, load level from spawn");
 			GameObject.FindWithTag("Player").transform.position = GameObject.Find("spawn").transform.position;
 		}
 
@@ -30,6 +32,8 @@ public class gameManager : MonoBehaviour {
 	}
 	void OnApplicationQuit(){
 		Debug.Log("Application Quit");
+		PlayerPrefs.SetString ("isDead", "false");
+		PlayerPrefs.SetFloat ("PlayerX", GameObject.Find("spawn").transform.position.x);
 		PlayerPrefs.SetFloat ("PlayerX", GameObject.Find("spawn").transform.position.x);
 		PlayerPrefs.SetFloat ("PlayerY", GameObject.Find("spawn").transform.position.y);
 		PlayerPrefs.SetFloat ("PlayerZ", GameObject.Find("spawn").transform.position.z);
