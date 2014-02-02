@@ -20,6 +20,8 @@ public class CameraFadeFrom : MonoBehaviour
 	// initialize the texture, background-style and initial color:
 	private void Awake()
 	{		
+		StartFade (Color.clear, 10.0f);
+		isFading = true;
 		m_FadeTexture = new Texture2D(1, 1);        
 		m_BackgroundStyle.normal.background = m_FadeTexture;
 		SetScreenOverlayColor(m_CurrentScreenOverlayColor);
@@ -89,11 +91,5 @@ public class CameraFadeFrom : MonoBehaviour
 		}
 		
 	}
-	
-	public void OnTriggerEnter(){
-//		Debug.Log ("THE THING");
-		StartFade (Color.clear, 10.0f);
-		isFading = true;
-		PlayerPrefs.SetString("isDead", "false");
-	}
+
 }

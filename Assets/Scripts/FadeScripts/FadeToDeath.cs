@@ -31,12 +31,12 @@ public class FadeToDeath : MonoBehaviour
 		//SetScreenOverlayColor(new Color(0,0,0,1));
 		//StartFade(new Color(1,0,0,1), 5);
 	}
-	
 	void Update(){
+		dead = GameObject.FindGameObjectWithTag("Player").GetComponent<playerInteract>().isdead;
 		//dead = SendMessage ("deadReturn");
-		dead = gameObject.GetComponent<playerInteract>().isdead;
-		if(dead){
-			StartFade (Color.red, 1.0f);
+		if(dead && !isFading){
+			isFading = true;
+			StartFade (Color.red, 2.0f);
 		}
 	}
 	

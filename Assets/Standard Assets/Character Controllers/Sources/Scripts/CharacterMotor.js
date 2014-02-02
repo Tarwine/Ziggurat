@@ -184,9 +184,8 @@ function Awake () {
 	tr = transform;
 }
 
-function somethingElse(){
+function getGrounded(){
 	SendMessage("setGrounding", grounded);
-	//return (groundNormal.y > 0.01);
 }
 
 

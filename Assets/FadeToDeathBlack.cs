@@ -17,6 +17,7 @@ public class FadeToDeathBlack : MonoBehaviour
 	public bool isFading = false;
 	public float times = 0.0f;
 	public float fadeTime;
+	private GameObject player;
 	
 	// initialize the texture, background-style and initial color:
 	private void Awake()
@@ -39,7 +40,12 @@ public class FadeToDeathBlack : MonoBehaviour
 		if(times > fadeTime){
 			Debug.Log ("Reloading Level");
 			PlayerPrefs.SetString("isDead", "true");
+
+
 			Application.LoadLevel(Application.loadedLevel);
+			player.GetComponent<playerInteract>().reset();
+			player.GetComponent<gameManager>().respawnPlayer();
+
 		}
 	}
 	
@@ -100,6 +106,8 @@ public class FadeToDeathBlack : MonoBehaviour
 	public void OnTriggerEnter(Collider other){
 		
 		if(other.gameObject.tag == "Player"){
+			player = other.gameObject;
+
 			isFading = true;
 			Debug.Log ("Entered Death Area");
 			StartFade (Color.black, fadeTime);

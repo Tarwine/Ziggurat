@@ -21,10 +21,20 @@ public class playerInteract : MonoBehaviour {
 		holding = false;
 		isdead = false;
 		timez = 0;
-		PlayerPrefs.SetString("isDead", "false");
+		DontDestroyOnLoad(transform.gameObject);
+		//PlayerPrefs.SetString("isDead", "false");
+	}
+	public void reset(){
+		ropeRange = false;
+		holding = false;
+		isdead = false;
+		deathSoundPlayed = false;
+		deadTime = 0 ;
+		timez = 0;
+		//PlayerPrefs.SetString("isDead", "false");
 	}
 
-	 public bool deadReturn(){
+	public bool deadReturn(){
 
 		return isdead;
 	}
@@ -39,12 +49,13 @@ public class playerInteract : MonoBehaviour {
 
 		//The following lines of code kill the player if he is in the air too long
 		//********************
+		SendMessage("getGrounded");
 
 		if(!isGrounded && !holding){
 			timez += Time.deltaTime;
 		}
 		if(isGrounded || holding){
-			if(timez > 1.5f && !holding){
+			if(timez > 100.5f && !holding){
 				isdead = true;
 				if(!deathSoundPlayed){
 					audio.PlayOneShot(deathSound);
@@ -57,8 +68,10 @@ public class playerInteract : MonoBehaviour {
 		}
 		if(isdead){
 			deadTime += Time.deltaTime;
-			if(deadTime > 2.0f){
+			if(deadTime > 1.5f){
 				Application.LoadLevel(Application.loadedLevel);
+				reset();
+				SendMessage("respawnPlayer");
 			}
 		}
 
@@ -87,7 +100,7 @@ public class playerInteract : MonoBehaviour {
 				grabbedRope = closestRope;
 				holding = true;
 				this.gameObject.GetComponentInChildren<HeadBobber>().enabled = false;
-				grabbedRope.rigidbody.AddForce(-transform.forward * 15);
+				grabbedRope.rigidbody.AddForce(transform.forward * 1000.0f);
 			}
 
 		}
@@ -99,18 +112,22 @@ public class playerInteract : MonoBehaviour {
 				SendMessage("SetVelocity", transform.forward * 10.0f);
 			}
 		}
+
 		//Used to warp to checkpoints
 		if(Input.GetKeyDown(KeyCode.Alpha1)){
 			if(GameObject.Find("checkpoint1") != null){
 				PlayerPrefs.SetString ("isDead", "true");
 				GameObject.Find("checkpoint1").GetComponent<checkPointBehavior>().manualSave();
+				SendMessage("respawnPlayer");
 				Application.LoadLevel(Application.loadedLevel);
+
 			}
 		}
 		if(Input.GetKeyDown(KeyCode.Alpha2)){
 			if(GameObject.Find("checkpoint2") != null){
 				PlayerPrefs.SetString ("isDead", "true");
 				GameObject.Find("checkpoint2").GetComponent<checkPointBehavior>().manualSave();
+				SendMessage("respawnPlayer");
 				Application.LoadLevel(Application.loadedLevel);
 			}
 		}
@@ -118,6 +135,7 @@ public class playerInteract : MonoBehaviour {
 			if(GameObject.Find("checkpoint3") != null){
 				PlayerPrefs.SetString ("isDead", "true");
 				GameObject.Find("checkpoint3").GetComponent<checkPointBehavior>().manualSave();
+				SendMessage("respawnPlayer");
 				Application.LoadLevel(Application.loadedLevel);
 			}
 		}
@@ -125,6 +143,7 @@ public class playerInteract : MonoBehaviour {
 			if(GameObject.Find("checkpoint4") != null){
 				PlayerPrefs.SetString ("isDead", "true");
 				GameObject.Find("checkpoint4").GetComponent<checkPointBehavior>().manualSave();
+				SendMessage("respawnPlayer");
 				Application.LoadLevel(Application.loadedLevel);
 			}
 		}
@@ -132,8 +151,13 @@ public class playerInteract : MonoBehaviour {
 			if(GameObject.Find("checkpoint5") != null){
 				PlayerPrefs.SetString ("isDead", "true");
 				GameObject.Find("checkpoint5").GetComponent<checkPointBehavior>().manualSave();
+				SendMessage("respawnPlayer");
 				Application.LoadLevel(Application.loadedLevel);
 			}
+		}
+		if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetButtonDown("Select"))
+		{
+			OVRDevice.ResetOrientation(0);
 		}
 	}
 	public void inRange(GameObject rope){
