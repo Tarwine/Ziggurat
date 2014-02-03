@@ -6,6 +6,7 @@ public class Level7: MonoBehaviour {
 	public GameObject PlatformPrefab;
 
 	public int gridSize;
+	public AudioClip slideAudio;
 
 	GameObject[ , ] grid;
 
@@ -21,6 +22,10 @@ public class Level7: MonoBehaviour {
 			for (int j = 0; j < gridSize; j++) {
 				grid[i, j] = (GameObject)Instantiate(PlatformPrefab, new Vector3(transform.position.x + (i * size), 0, transform.position.z + (j * size)), transform.rotation);
 				grid[i, j].AddComponent<Level7Platforms>();
+				grid[i, j].AddComponent<AudioSource>();
+				grid[i, j].audio.volume = 0.5f;
+				grid[i, j].audio.playOnAwake = false;
+				grid[i, j].audio.clip = slideAudio;
 				Destroy (grid[i, j].GetComponent<tileFallingBehavior>());
 			}
 		}

@@ -2,12 +2,10 @@
 using System.Collections;
 
 public class Level7Platforms : MonoBehaviour {
-
 	GameObject GameManager;
 
 	// Use this for initialization
 	void Start () {
-
 		GameManager = GameObject.FindGameObjectWithTag("GameController");
 	
 	}
@@ -28,7 +26,7 @@ public class Level7Platforms : MonoBehaviour {
 
 	IEnumerator Float(float amount) {
 		float initPos = transform.position.y;
-
+		audio.Play();
 		while ( transform.position.y <= initPos + amount) {
 			transform.position += Vector3.up * 3.5f * Time.deltaTime;
 			yield return 0;

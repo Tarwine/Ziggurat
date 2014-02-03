@@ -4716,6 +4716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlatformPrefab: {fileID: 100000, guid: d2e37fd980d75e8488a2dc6f9b237701, type: 2}
   gridSize: 10
+  slideAudio: {fileID: 8300000, guid: d4a8039d65c307a49a37557d00448879, type: 3}
 --- !u!1 &1662079285
 GameObject:
   m_ObjectHideFlags: 0
