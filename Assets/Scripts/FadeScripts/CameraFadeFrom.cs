@@ -50,6 +50,7 @@ public class CameraFadeFrom : MonoBehaviour
 				m_CurrentScreenOverlayColor = m_TargetScreenOverlayColor;
 				SetScreenOverlayColor(m_CurrentScreenOverlayColor);
 				m_DeltaColor = new Color(0,0,0,0);
+				isFading = false;
 			}
 			else
 			{

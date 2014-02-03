@@ -41,6 +41,7 @@ public class RisingPlatform : MonoBehaviour {
 		while (true) {
 			if (initialHeight + riseAmount <= transform.position.y) {
 				transform.rigidbody.velocity = Vector3.zero;
+				audio.Stop();
 				break;
 			}
 				yield return 0;

@@ -22,6 +22,7 @@ public class SparkleShot : MonoBehaviour {
 			Instantiate(explosion, explosionSpawn.transform.position, explosionSpawn.transform.rotation);
 			Instantiate(platformArea, areaSpawn.transform.position, areaSpawn.transform.rotation);
 			Destroy(GameObject.Find("gemOBJ"));
+			audio.Play();
 			Debug.Log("Took the Cat");
 			hasFired = true;
 		}
