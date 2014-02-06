@@ -76,7 +76,15 @@ public class CameraFadeFrom : MonoBehaviour
 		m_FadeTexture.SetPixel(0, 0, m_CurrentScreenOverlayColor);
 		m_FadeTexture.Apply();
 	}
-	
+
+	public void setClearNow(){
+		Debug.Log ("SETCLEAR");
+		StartFade (Color.clear, 1.0f);
+		isFading = true;
+		m_FadeTexture = new Texture2D(1, 1);        
+		m_BackgroundStyle.normal.background = m_FadeTexture;
+		SetScreenOverlayColor(m_CurrentScreenOverlayColor);
+	}
 	
 	// initiate a fade from the current screen color (set using "SetScreenOverlayColor") towards "newScreenOverlayColor" taking "fadeDuration" seconds
 	public void StartFade(Color newScreenOverlayColor, float fadeDuration)

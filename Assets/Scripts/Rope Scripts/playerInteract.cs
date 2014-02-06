@@ -9,7 +9,7 @@ public class playerInteract : MonoBehaviour {
 	private bool holding;
 	public bool isGrounded = true;
 	private float timez;
-	private float deadTime;
+	public float deadTime;
 	public bool isdead;
 	public AudioClip deathSound;
 	private bool deathSoundPlayed = false;
@@ -55,7 +55,7 @@ public class playerInteract : MonoBehaviour {
 			timez += Time.deltaTime;
 		}
 		if(isGrounded || holding){
-			if(timez > 100.5f && !holding){
+			if(timez > 1.5f && !holding){
 				isdead = true;
 				if(!deathSoundPlayed){
 					audio.PlayOneShot(deathSound);
@@ -69,8 +69,9 @@ public class playerInteract : MonoBehaviour {
 		if(isdead){
 			deadTime += Time.deltaTime;
 			if(deadTime > 1.5f){
-				Application.LoadLevel(Application.loadedLevel);
+				//Application.LoadLevel(Application.loadedLevel);
 				reset();
+				Application.LoadLevel(Application.loadedLevel);
 				SendMessage("respawnPlayer");
 			}
 		}

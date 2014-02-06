@@ -36,7 +36,16 @@ public class FadeToDeath : MonoBehaviour
 		//dead = SendMessage ("deadReturn");
 		if(dead && !isFading){
 			isFading = true;
-			StartFade (Color.red, 2.0f);
+			StartFadeDeath (Color.red, 2.0f);
+		}
+
+		if(isFading == true){
+			times += Time.deltaTime;
+		}
+		//Debug.Log (GameObject.FindWithTag ("Player").GetComponent<playerInteract>().deadTime);
+		if(!dead && times > 2.0f){
+			Debug.Log("THIS IS THE PART YEA");
+			StartFadeDeath (Color.clear, 0.0f);
 		}
 	}
 	
@@ -80,7 +89,7 @@ public class FadeToDeath : MonoBehaviour
 	
 	
 	// initiate a fade from the current screen color (set using "SetScreenOverlayColor") towards "newScreenOverlayColor" taking "fadeDuration" seconds
-	public void StartFade(Color newScreenOverlayColor, float fadeDuration)
+	public void StartFadeDeath(Color newScreenOverlayColor, float fadeDuration)
 	{
 		if (fadeDuration <= 0.0f)		// can't have a fade last -2455.05 seconds!
 		{

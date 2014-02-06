@@ -32,6 +32,7 @@ public class gameManager : MonoBehaviour {
 	}
 	public void respawnPlayer(){
 		Debug.Log("Player respawned at checkpoint");
+		SendMessage("setClearNow");
 		GameObject.FindWithTag("Player").transform.position = new Vector3(PlayerPrefs.GetFloat ("PlayerX"), PlayerPrefs.GetFloat ("PlayerY"), PlayerPrefs.GetFloat ("PlayerZ"));
 	}
 	void OnApplicationQuit(){

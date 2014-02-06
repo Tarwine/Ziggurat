@@ -105,6 +105,8 @@ GameObject:
   - 114: {fileID: 11400020}
   - 114: {fileID: 11400024}
   - 82: {fileID: 8200000}
+  - 114: {fileID: 11400022}
+  - 114: {fileID: 11400026}
   m_Layer: 0
   m_Name: JumpingOVR
   m_TagString: Player
@@ -589,8 +591,23 @@ MonoBehaviour:
   closestRope: {fileID: 0}
   usingAxis: z
   isGrounded: 1
+  deadTime: 0
   isdead: 0
   deathSound: {fileID: 8300000, guid: 0e2cea20f917da349979a44826f8e062, type: 3}
+--- !u!114 &11400022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1109b7933532a749ad9884daa0ddcd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFading: 0
+  times: 0
+  dead: 0
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -602,6 +619,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d7c808a87488143a89d9206cc0b230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11400026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c778482d1a34b4aaa5cdb8d7125122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFading: 0
+  times: 0
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
