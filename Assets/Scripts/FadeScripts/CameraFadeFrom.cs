@@ -78,7 +78,7 @@ public class CameraFadeFrom : MonoBehaviour
 	}
 
 	public void setClearNow(){
-		Debug.Log ("SETCLEAR");
+		Debug.Log ("Clear overlay");
 		StartFade (Color.clear, 1.0f);
 		isFading = true;
 		m_FadeTexture = new Texture2D(1, 1);        

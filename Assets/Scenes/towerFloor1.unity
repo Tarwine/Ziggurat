@@ -1806,7 +1806,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 8200000, guid: 3b0a6fc175aab984989629ee2fa17b35, type: 2}
       propertyPath: m_Volume
-      value: .00999999978
+      value: .300000012
       objectReference: {fileID: 0}
     - target: {fileID: 8200000, guid: 3b0a6fc175aab984989629ee2fa17b35, type: 2}
       propertyPath: m_PlayOnAwake
@@ -2476,7 +2476,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 91e378bd8462e3447bdff1628cf7cb2a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .100000001
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -12450,7 +12450,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 78fba0ea4cb7237409b91548b7f4d917, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .00999999978
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 1
   Mute: 0

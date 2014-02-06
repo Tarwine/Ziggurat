@@ -44,8 +44,9 @@ public class FadeToDeath : MonoBehaviour
 		}
 		//Debug.Log (GameObject.FindWithTag ("Player").GetComponent<playerInteract>().deadTime);
 		if(!dead && times > 2.0f){
-			Debug.Log("THIS IS THE PART YEA");
+			Debug.Log("Respawned - Remove red");
 			StartFadeDeath (Color.clear, 0.0f);
+			times = 0.0f;
 		}
 	}
 	
