@@ -5122,7 +5122,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: f20f331408bf85143a1f17348e4fbe1f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .300000012
+  m_Volume: .200000003
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5693,7 +5693,7 @@ Prefab:
       objectReference: {fileID: 8300000, guid: f20f331408bf85143a1f17348e4fbe1f, type: 3}
     - target: {fileID: 8200000, guid: 3b0a6fc175aab984989629ee2fa17b35, type: 2}
       propertyPath: m_Volume
-      value: .300000012
+      value: .200000003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b0a6fc175aab984989629ee2fa17b35, type: 2}
