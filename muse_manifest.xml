@@ -5,7 +5,7 @@
     <file name="index.css" crc="45204522" ref="index"/>
     <file name="download.css" crc="90734088" ref="download"/>
     <file name="iefonts_download.css" crc="3932786077" ref="download"/>
-    <file name="media.css" crc="3851929301" ref="media"/>
+    <file name="media.css" crc="4179246205" ref="media"/>
     <file name="iefonts_media.css" crc="4072562304" ref="media"/>
   </folder>
   <folder name="scripts">
@@ -36,5 +36,5 @@
   </folder>
   <file name="index.html" crc="4100717178" mt="1392094370621" redirect="true"/>
   <file name="download.html" crc="532755816" mt="1392094383967" redirect="true"/>
-  <file name="media.html" crc="4089417730" mt="1392095453411" redirect="true"/>
+  <file name="media.html" crc="4267982550" mt="1392096102778" redirect="true"/>
 </manifest>

@@ -6,8 +6,8 @@
 #page
 {
 	z-index: 1;
-	width: 960px;
-	min-height: 585.55px;
+	width: 920px;
+	min-height: 477.60000000000014px;
 	background-image: none;
 	border-style: none;
 	border-color: transparent;
@@ -16,22 +16,15 @@
 	-webkit-border-radius: 50px;
 	-khtml-border-radius: 50px;
 	border-radius: 50px;
-	padding-bottom: 0px;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-#page_position_content
-{
-	margin-top: 20px;
-	margin-bottom: -7px;
+	padding: 20px 20px 88.39999999999986px;
 }
 
 #pslideshowu242
 {
 	width: 0.01px;
-	padding-bottom: 313px;
-	margin-left: 20px;
+	padding-bottom: 299px;
 	position: relative;
 }
 
@@ -42,8 +35,8 @@
 	height: 108px;
 	position: relative;
 	margin-right: -10000px;
-	margin-top: 154px;
-	left: 52px;
+	margin-top: 168px;
+	left: 321px;
 }
 
 #u253
@@ -53,8 +46,8 @@
 	height: 546px;
 	background-color: #565656;
 	background-color: rgba(68, 68, 68, 0.9);
-	top: -125px;
-	left: -52px;
+	top: -139px;
+	left: -321px;
 	-pie-background: rgba(68, 68, 68, 0.9);
 }
 
@@ -237,8 +230,8 @@
 	font-size: 30px;
 	font-family: coda, sans-serif;
 	font-weight: 400;
-	top: 122px;
-	left: -52px;
+	top: 108px;
+	left: -321px;
 }
 
 #u244-4popup
@@ -258,8 +251,8 @@
 	font-size: 30px;
 	font-family: coda, sans-serif;
 	font-weight: 400;
-	top: 122px;
-	left: 838px;
+	top: 108px;
+	left: 569px;
 }
 
 #u243-4popup
@@ -288,7 +281,7 @@
 {
 	z-index: 9;
 	width: 446px;
-	margin-left: 257px;
+	margin-left: 237px;
 	top: -501px;
 	margin-bottom: -34px;
 }
@@ -385,15 +378,6 @@
 	top: 8px;
 }
 
-#pu381-4
-{
-	width: 0.01px;
-	margin-left: 168px;
-	top: -451px;
-	margin-bottom: -37px;
-	position: relative;
-}
-
 #u381-4
 {
 	z-index: 55;
@@ -404,8 +388,19 @@
 	font-size: 24px;
 	font-family: comfortaa, sans-serif;
 	font-weight: 700;
+	margin-left: 417px;
+	top: -437px;
+	margin-bottom: -37px;
 	position: relative;
-	margin-right: -10000px;
+}
+
+#u87-3
+{
+	z-index: 6;
+	width: 5px;
+	margin-left: 617px;
+	top: -346px;
+	margin-bottom: -17px;
 }
 
 #u458-4
@@ -418,27 +413,9 @@
 	font-size: 24px;
 	font-family: comfortaa, sans-serif;
 	font-weight: 700;
+	margin-left: 423px;
+	margin-top: 7px;
 	position: relative;
-	margin-right: -10000px;
-	left: 515px;
-}
-
-#pu87-3
-{
-	width: 0.01px;
-	margin-left: 510px;
-	top: -414px;
-	margin-bottom: -319px;
-	position: relative;
-}
-
-#u87-3
-{
-	z-index: 6;
-	width: 5px;
-	margin-right: -10000px;
-	margin-top: 68px;
-	left: 127px;
 }
 
 #u459
@@ -449,8 +426,8 @@
 	border-style: none;
 	border-color: transparent;
 	background-color: transparent;
+	margin-left: 250px;
 	position: relative;
-	margin-right: -10000px;
 }
 
 body
