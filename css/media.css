@@ -181,9 +181,7 @@
 
 #u411_img
 {
-	margin-top: -2px;
-	margin-right: 1px;
-	margin-bottom: -2px;
+	margin: -2px 1px;
 }
 
 #u420
@@ -200,8 +198,8 @@
 
 #u420_img
 {
-	margin-top: -2px;
-	margin-right: 1px;
+	margin-left: 1px;
+	margin-top: -1px;
 	margin-bottom: -1px;
 }
 
