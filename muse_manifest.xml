@@ -5,7 +5,7 @@
     <file name="index.css" crc="45204522" ref="index"/>
     <file name="download.css" crc="90734088" ref="download"/>
     <file name="iefonts_download.css" crc="3932786077" ref="download"/>
-    <file name="media.css" crc="4179246205" ref="media"/>
+    <file name="media.css" crc="3953662599" ref="media"/>
     <file name="iefonts_media.css" crc="4072562304" ref="media"/>
   </folder>
   <folder name="scripts">
@@ -23,18 +23,18 @@
     <file name="u69-4.png" crc="3950373771" ref="index:download:media"/>
     <file name="promoimg.png" crc="4029915621" ref="index"/>
     <file name="capture3.png" crc="4046737459" ref="download"/>
-    <file name="capture3lg.jpg" crc="4202369902" ref="media"/>
+    <file name="capture3lg.jpg" crc="3816780517" ref="media"/>
     <file name="blank.gif" crc="4208392903" ref="media"/>
-    <file name="capture4.jpg" crc="4280885853" ref="media"/>
+    <file name="capture4.jpg" crc="504360893" ref="media"/>
     <file name="321.jpg" crc="402774987" ref="media"/>
     <file name="jam.jpg" crc="348807575" ref="media"/>
-    <file name="capture3lg81x45.jpg" crc="4272005885" ref="media"/>
-    <file name="capture481x45.jpg" crc="315120325" ref="media"/>
+    <file name="capture3lg81x45.jpg" crc="4087954842" ref="media"/>
+    <file name="capture481x45.jpg" crc="58136532" ref="media"/>
     <file name="32198x45.jpg" crc="3823405995" ref="media"/>
     <file name="jam60x45.jpg" crc="337953112" ref="media"/>
     <file name="loading.gif" crc="3815509949" ref="media"/>
   </folder>
   <file name="index.html" crc="4100717178" mt="1392094370621" redirect="true"/>
   <file name="download.html" crc="532755816" mt="1392094383967" redirect="true"/>
-  <file name="media.html" crc="4267982550" mt="1392096102778" redirect="true"/>
+  <file name="media.html" crc="404286897" mt="1392096681679" redirect="true"/>
 </manifest>
