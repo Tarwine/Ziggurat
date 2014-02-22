@@ -17,17 +17,28 @@ public class gameManager : MonoBehaviour {
 			GameObject.FindWithTag("Player").transform.position = GameObject.Find("spawn").transform.position;
 		}*/
 
-		if(Application.isPlaying){
+		if(Application.isPlaying && !Application.isWebPlayer){
 			Screen.showCursor = false;
 		}
+		else if(Application.isPlaying && Application.isWebPlayer){
+			Screen.showCursor = false;
+			Screen.lockCursor = true;
+		}
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
-	if(Input.GetKeyDown (KeyCode.Escape) ){
+		if(Input.GetKeyDown(KeyCode.Escape) && Application.isPlaying && !Application.isWebPlayer){
 			Application.Quit();
-
+		}
+		else if(Input.GetKeyDown (KeyCode.Escape) && Application.isPlaying && Application.isWebPlayer && !Screen.showCursor){
+			Screen.showCursor = true;
+			Screen.lockCursor = false;
+		}
+		else if(Input.GetMouseButtonDown(0) && Application.isPlaying && Application.isWebPlayer && Screen.showCursor){
+			Screen.showCursor = false;
+			Screen.lockCursor = true;
 		}
 	}
 	public void respawnPlayer(){

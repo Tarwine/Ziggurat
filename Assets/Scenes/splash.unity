@@ -84,7 +84,6 @@ GameObject:
   - 4: {fileID: 351525619}
   - 114: {fileID: 351525621}
   - 114: {fileID: 351525620}
-  - 114: {fileID: 351525622}
   m_Layer: 8
   m_Name: OVRCameraController
   m_TagString: Untagged
@@ -98,8 +97,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 9da535ecc7e009544bd58323d6696a4d, type: 2}
   m_PrefabInternal: {fileID: 2020987000}
   m_GameObject: {fileID: 351525618}
-  m_LocalRotation: {x: 0, y: -.999986768, z: 0, w: -.00515588326}
-  m_LocalPosition: {x: -.47034812, y: 4.12997913, z: 5.10851383}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0605267286, y: 4.12997913, z: -11.7003002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 511586975}
@@ -149,17 +148,6 @@ MonoBehaviour:
   backgroundColor: {r: 0, g: 0, b: 0, a: 1}
   nearClipPlane: .150000006
   farClipPlane: 1000
---- !u!114 &351525622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 351525618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4b9a3299bf89fe44913eeeb8b09b6ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &511586970
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,8 +377,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1112749264}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.52383518, z: 0}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: -4.37113883e-08}
+  m_LocalPosition: {x: 0, y: 4.52383518, z: -5.87583494}
   m_LocalScale: {x: 16, y: 9, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -589,7 +577,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 9da535ecc7e009544bd58323d6696a4d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.47034812
+      value: .0605267286
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9da535ecc7e009544bd58323d6696a4d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -597,7 +585,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9da535ecc7e009544bd58323d6696a4d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 5.10851383
+      value: -11.7003002
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9da535ecc7e009544bd58323d6696a4d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -605,7 +593,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9da535ecc7e009544bd58323d6696a4d, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -.999986768
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9da535ecc7e009544bd58323d6696a4d, type: 2}
       propertyPath: m_LocalRotation.z
@@ -613,7 +601,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9da535ecc7e009544bd58323d6696a4d, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.00515588326
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 9da535ecc7e009544bd58323d6696a4d, type: 2}
       propertyPath: backgroundColor.r

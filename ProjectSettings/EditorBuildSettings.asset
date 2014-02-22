@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/splash.unity
+    path: Assets/Scenes/FPS Scenes/SplashFPS.unity
   - enabled: 1
-    path: Assets/Scenes/towerOutside.unity
+    path: Assets/Scenes/FPS Scenes/towerOutsideFPS.unity
   - enabled: 1
-    path: Assets/Scenes/towerFloor1.unity
+    path: Assets/Scenes/FPS Scenes/towerFloorFPS.unity
   - enabled: 1
-    path: Assets/Scenes/SetPiece_ver_2.unity
+    path: Assets/Scenes/FPS Scenes/SetPieceFPS.unity
   - enabled: 1
-    path: Assets/Scenes/FinalLevelT.unity
+    path: Assets/Scenes/FPS Scenes/FinalLevelFPS.unity

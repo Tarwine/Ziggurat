@@ -32,7 +32,13 @@ public class FadeToDeath : MonoBehaviour
 		//StartFade(new Color(1,0,0,1), 5);
 	}
 	void Update(){
-		dead = GameObject.FindGameObjectWithTag("Player").GetComponent<playerInteract>().isdead;
+		if(GameObject.FindGameObjectWithTag("Player").GetComponent<playerInteract>() != null){
+			dead = GameObject.FindGameObjectWithTag("Player").GetComponent<playerInteract>().isdead;
+		}
+		else{
+			dead = GameObject.FindGameObjectWithTag("Player").GetComponent<playerInteractFPS>().isdead;
+		}
+
 		//dead = SendMessage ("deadReturn");
 		if(dead && !isFading){
 			isFading = true;

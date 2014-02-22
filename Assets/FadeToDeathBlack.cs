@@ -43,7 +43,12 @@ public class FadeToDeathBlack : MonoBehaviour
 
 
 			Application.LoadLevel(Application.loadedLevel);
-			player.GetComponent<playerInteract>().reset();
+			if(player.GetComponent<playerInteract>() != null){
+				player.GetComponent<playerInteract>().reset();
+			}
+			else{
+				player.GetComponent<playerInteractFPS>().reset();
+			}
 			player.GetComponent<gameManager>().respawnPlayer();
 
 		}
