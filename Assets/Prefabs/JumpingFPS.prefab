@@ -248,12 +248,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68ec2fe99d1108b9d0006a298d76c639, type: 3}
+  m_Script: {fileID: 11500000, guid: 1790f7f49817afd44812d05caae1d2c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   axes: 2
   sensitivityX: 10
   sensitivityY: 10
+  sensitivityXJoy: 15
+  sensitivityYJoy: 15
   minimumX: 0
   maximumX: 360
   minimumY: -60
@@ -388,6 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d7c808a87488143a89d9206cc0b230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenuImage: {fileID: 2800000, guid: 4541520905c18e441b9f7966dab8cbaa, type: 3}
 --- !u!114 &11400026
 MonoBehaviour:
   m_ObjectHideFlags: 1

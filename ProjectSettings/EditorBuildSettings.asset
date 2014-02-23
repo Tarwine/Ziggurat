@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/FPS Scenes/SetPieceFPS.unity
   - enabled: 1
     path: Assets/Scenes/FPS Scenes/FinalLevelFPS.unity
+  - enabled: 1
+    path: Assets/Scenes/FPS Scenes/CreditsFPS.unity

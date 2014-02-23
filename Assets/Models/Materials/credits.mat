@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ziggurat_SPLASH
+  m_Name: credits
   m_Shader: {fileID: 10, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
@@ -17,17 +17,21 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: d3d1e7e12d74bcf4eab70664967c162f, type: 3}
+          m_Texture: {fileID: 2800000, guid: 7862ad84499779141917e0a516c7a5d8, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _Illum
         second:
-          m_Texture: {fileID: 2800000, guid: d3d1e7e12d74bcf4eab70664967c162f, type: 3}
+          m_Texture: {fileID: 2800000, guid: 7862ad84499779141917e0a516c7a5d8, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
+      data:
+        first:
+          name: _Shininess
+        second: .110389277
       data:
         first:
           name: _EmissionLM
@@ -37,3 +41,7 @@ Material:
         first:
           name: _Color
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: .735294104, g: .735294104, b: .735294104, a: 1}
