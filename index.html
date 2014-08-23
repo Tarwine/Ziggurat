@@ -1,94 +1,87 @@
-<!DOCTYPE html>
-<html class="html">
- <head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Home | Ziggurat</title>
+		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
+		<script type="text/javascript">
+		<!--
+		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+		if (document.location.protocol == 'https:')
+			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		-->
+		</script>
+		<script type="text/javascript" src="js/gamestart.js"></script>
+		
+		<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="image_src" type="image/jpeg" href="img/panel.jpg" />
+	</head>
+	<body> 
+    
+           <h1 class="top">Ziggurat</h1>
+        
+		<div id="nav">
+			<ul>
+				<li class='active'><a href='#'>Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li class='last'><a href="donate.php">Donate</a></li>
+			</ul>
+		</div>
+		
+            
+        <div class="content">
+			
+			<!-- Unity Stuff -->
+			<div id="unityPlayer">
+				<div class="missing">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+					</a>
+				</div>
+			</div>
+			<!-- End of Unity Stuff -->
+        </div>
+        <!-- All our Stuff -->
+        <div id="controls">
+            <img src="img/controlpanel.png" >
+        </div>
+        
+        <br />
+        <br />
+        <p class="scrip">Born from an Orlando 48-hour Gamejam, 
+            <strong>Ziggurat</strong> is a first-person, puzzle platformer built for the <big>Oculus Rift VR</big> experience. 
+            We have a desktop version avaliable for play and a downloadable VR version.</p>
+        <br />
+        <p class="scrip">Enjoy the game?  If you did, let us know!  <big>We love the feedback!</big>  And with enough support, we will take this quick, sloppy contest entry and make it a full-fledged, professional polished game.</p>
+        <p class="scrip">But only if you guys are down, you down?</p>
+        
+        
+        <div id="social">
+            <img src="img/social.png" alt="socialize" id="socialize" height="128" width="288">
+            <a href="http://facebook.com"><img src="img/facebook.png" alt="Facebook" id="fbook"></a>
+            <a href="http://twitter.com"><img src="img/twitter.png" alt="Twitter" id="twitter"></a>
+            <a href="htpp://paypal.com"><img src="img/paypal.png" alt="PayPal" id="paypal"></a>
+        </div>
+        <br />
+        <div id="download">
+            <img src="img/Oculus.png" alt="oculus" width="350">
+            <p>We also have an Oculus Rift compatible version, for free!</p>
+            <a href="http://www.mediafire.com/download/jwhk2gcesxc22g0/Ziggurat_v0.2-alpha.zip">Download for Windows/ Mac</a>
+        </div>
+        
+        <div id="page"></div>
+        
+         <div id="footer">
+    			<a href="http://www.otronicon.org/index.php"><img src="img/otroniconwhite.png" width="160" height="95" id="footerimg" alt="Orlando Otronicon" /></a>
+				<a href="http://www.oculusvr.com/"><img src="img/oculuswhite2.png" width="180" height="85" id="footerimg" alt="Oculus Rift VR" /></a>
+				<a href="https://svad.cah.ucf.edu/"><img src="img/svadfoot.png" width="160" height="85" id="footerimg" alt="UCF SVAD" /></a>
 
-  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
-  <meta name="generator" content="7.2.232.244"/>
-  <title>Overview</title>
-  <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="css/site_global.css?397963719"/>
-  <link rel="stylesheet" type="text/css" href="css/master_a-master.css?3806739886"/>
-  <link rel="stylesheet" type="text/css" href="css/index.css?285486063" id="pagesheet"/>
-  <!-- Other scripts -->
-  <script type="text/javascript">
-   document.documentElement.className += ' js';
-var __adobewebfontsappname__ = "muse";
-</script>
-  <!-- JS includes -->
-  <script type="text/javascript">
-   document.write('\x3Cscript src="' + (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//webfonts.creativecloud.com/comfortaa:n4:all.js" type="text/javascript">\x3C/script>');
-</script>
-   </head>
- <body>
-
-  <div class="rounded-corners clearfix" id="page"><!-- column -->
-   <img class="colelem" id="u69-4" src="images/u69-4.png" alt="Ziggurat" width="495" height="60"/><!-- rasterized frame -->
-   <ul class="MenuBar rounded-corners clearfix colelem" id="menuu91"><!-- horizontal box -->
-    <li class="MenuItemContainer clearfix grpelem" id="u92"><!-- vertical box -->
-     <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive rounded-corners clearfix colelem" id="u95" href="index.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u96-4"><!-- content --><p>Overview</p></div></a>
-    </li>
-    <li class="MenuItemContainer clearfix grpelem" id="u140"><!-- vertical box -->
-     <a class="nonblock nontext MenuItem MenuItemWithSubMenu rounded-corners clearfix colelem" id="u141" href="download.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u142-4"><!-- content --><p>Download</p></div></a>
-    </li>
-    <li class="MenuItemContainer clearfix grpelem" id="u153"><!-- vertical box -->
-     <a class="nonblock nontext MenuItem MenuItemWithSubMenu rounded-corners clearfix colelem" id="u156" href="media.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u159-4"><!-- content --><p>Media</p></div></a>
-    </li>
-   </ul>
-   <div class="clearfix colelem" id="ppu235"><!-- group -->
-    <div class="clearfix grpelem" id="pu235"><!-- column -->
-     <div class="clip_frame colelem" id="u235"><!-- image -->
-      <img class="block" id="u235_img" src="images/promoimg.png" alt="" width="484" height="223"/>
-     </div>
-     <div class="clearfix colelem" id="pu463-10"><!-- group -->
-      <div class="clearfix grpelem" id="u463-10"><!-- content -->
-       <p id="u463-2"><span id="u463">Programmers</span></p>
-       <p><span id="u463-3">Jeremy Boggs</span></p>
-       <p><span id="u463-5">Travis Fort</span></p>
-       <p><span id="u463-7">Brandon Austin</span></p>
-      </div>
-      <div class="clearfix grpelem" id="u462-8"><!-- content -->
-       <p id="u462-2"><span id="u462">Artists</span></p>
-       <p><span id="u462-3">David Berry</span></p>
-       <p><span id="u462-5">Brian Kortbus</span></p>
-      </div>
-     </div>
-    </div>
-    <div class="clearfix grpelem" id="u87-3"><!-- content -->
-     <p>&nbsp;</p>
-    </div>
-    <div class="clearfix grpelem" id="u185-13"><!-- content -->
-     <p id="u185-2"><span id="u185">Ziggurat is an atmospheric Puzzle Platformer utilizing the Oculus Rift.</span></p>
-     <p id="u185-3">&nbsp;</p>
-     <p id="u185-5"><span id="u185-4">It was the winner of the 2014 Otronicon Game Jam, and was featured at the Feb 2014 Indienomicon VR Meetup</span></p>
-     <p id="u185-6">&nbsp;</p>
-     <p id="u185-8"><span id="u185-7">On the download page is a link to the current build of the game, it's mostly a tech demo at the moment, but we hope to take it much farther!</span></p>
-     <p id="u185-9">&nbsp;</p>
-     <p>&nbsp;</p>
-     <p>&nbsp;</p>
-    </div>
-   </div>
-   <div class="verticalspacer"></div>
-  </div>
-  <!-- JS includes -->
-  <script type="text/javascript">
-   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
-</script>
-  <script type="text/javascript">
-   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
-</script>
-  <script src="scripts/museutils.js?4291592202" type="text/javascript"></script>
-  <script src="scripts/jquery.musemenu.js?3788803530" type="text/javascript"></script>
-  <script src="scripts/jquery.watch.js?4068933136" type="text/javascript"></script>
-  <!-- Other scripts -->
-  <script type="text/javascript">
-   $(document).ready(function() { try {
-Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
-Muse.Utils.prepHyperlinks(true);/* body */
-Muse.Utils.initWidget('.MenuBar', function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
-Muse.Utils.fullPage('#page');/* 100% height page */
-Muse.Utils.showWidgetsWhenReady();/* body */
-Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
-} catch(e) { Muse.Assert.fail('Error calling selector function:' + e); }});
-</script>
-   </body>
+        </div>
+        <div id="bottom">
+            This is an educational assignment prepared for the UCF SVAD course DIG4104C: Web Design Workshop with Dr. Moshell, Spring 2014. Not a commercial product
+        </div>
+	</body>
 </html>
