@@ -30,9 +30,14 @@ public class MouseLookJoy : MonoBehaviour {
 	public float minimumY = -60F;
 	public float maximumY = 60F;
 
+	protected float mouseRot = 0.0f;
+
 	protected CharacterController Controller = null;
 	protected OVRCameraRig CameraController = null;
 	protected Transform DirXform = null;
+
+	private float SimulationRate = 60.0f;
+	public float RotationAmount = 1.5f;
 
 	float rotationY = 0F;
 
@@ -67,23 +72,26 @@ public class MouseLookJoy : MonoBehaviour {
 
 	void Update ()
 	{
-		float hmdY = CameraController.centerEyeAnchor.localRotation.eulerAngles.y;
-		DirXform.rotation = Quaternion.Euler(0.0f, hmdY, 0.0f);
-		rotationY = DirXform.rotation.y;
+
+		float rotateInfluence = SimulationRate * Time.deltaTime * RotationAmount;
+
+
 
 		if (axes == RotationAxes.MouseXAndY)
 		{
 			float rotationX = transform.localEulerAngles.y + (Input.GetAxis("Mouse X") * sensitivityX) + (Input.GetAxis("JoyLookX") * sensitivityXJoy);
 			
-			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+			rotationY += Input.GetAxis("Mouse Y") * sensitivityY * rotateInfluence;
 			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
 			
 			transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
 		}
 		else if (axes == RotationAxes.MouseX)
 		{
-			transform.Rotate(0, (Input.GetAxis("Mouse X")* sensitivityX) + (Input.GetAxis("JoyLookX") * sensitivityXJoy), 0);
-
+			mouseRot += (Input.GetAxis("Mouse X")* sensitivityX) * rotateInfluence + ((Input.GetAxis("JoyLookX") * sensitivityXJoy) * rotateInfluence);
+			DirXform.rotation = Quaternion.Euler(0, mouseRot, 0);
+			//transform.Rotate(0, ((Input.GetAxis("Mouse X")* sensitivityX) * rotateInfluence) + ((Input.GetAxis("JoyLookX") * sensitivityXJoy) * rotateInfluence), 0);
+			//DirXform.rotation = Quaternion.Euler(0.0f, transform.rotation.y, 0.0f);
 		}
 		else
 		{
@@ -92,6 +100,13 @@ public class MouseLookJoy : MonoBehaviour {
 			
 			transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
 		}
+
+
+
+		transform.rotation = DirXform.rotation;
+		float hmdY = CameraController.centerEyeAnchor.localRotation.eulerAngles.y;
+		DirXform.rotation *=  Quaternion.Euler(0, hmdY, 0);
+
 	}
 	
 	void Start ()
