@@ -409,7 +409,7 @@ MonoBehaviour:
   Acceleration: .25
   Damping: .300000012
   BackAndSideDampen: .5
-  JumpForce: .300000012
+  JumpForce: .5
   RotationAmount: 1.5
   RotationRatchet: 45
   HmdRotatesY: 1

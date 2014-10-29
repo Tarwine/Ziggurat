@@ -68,7 +68,7 @@ public class MouseLookJoy : MonoBehaviour {
 	void Update ()
 	{
 		float hmdY = CameraController.centerEyeAnchor.localRotation.eulerAngles.y;
-		DirXform.rotation *= Quaternion.Euler(0.0f, hmdY, 0.0f);
+		DirXform.rotation = Quaternion.Euler(0.0f, hmdY, 0.0f);
 		rotationY = DirXform.rotation.y;
 
 		if (axes == RotationAxes.MouseXAndY)

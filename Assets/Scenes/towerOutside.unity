@@ -159,7 +159,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &241470249
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +222,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &272414650
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +449,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f5ce965cc85da044da88bd0c4c12abae, type: 2}
+      propertyPath: playerPrefab
+      value: 
+      objectReference: {fileID: 100010, guid: c2fc0baad5ceb8e4496e8c4dd629cee5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5ce965cc85da044da88bd0c4c12abae, type: 2}
   m_RootGameObject: {fileID: 463446102}
@@ -484,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67cce3604625a994d8392fbfa2de94d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 100008, guid: 30d0e40a507ea544882dad15aa5ab038, type: 2}
+  playerPrefab: {fileID: 100010, guid: c2fc0baad5ceb8e4496e8c4dd629cee5, type: 2}
 --- !u!135 &463446104
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -746,7 +750,7 @@ Transform:
   - {fileID: 422590248}
   - {fileID: 1208040944}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
 --- !u!1 &1493175174
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,7 +859,7 @@ Transform:
   m_LocalScale: {x: 9.31370735, y: 9.31370735, z: 9.31370735}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1001 &1649325352
 Prefab:
   m_ObjectHideFlags: 0

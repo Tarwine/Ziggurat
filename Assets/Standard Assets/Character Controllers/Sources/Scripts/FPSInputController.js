@@ -1,4 +1,5 @@
 private var motor : CharacterMotor;
+protected var DirXform : Transform;
 
 // Use this for initialization
 function Awake () {
@@ -33,7 +34,7 @@ function Update () {
 	}
 	
 	// Apply the direction to the CharacterMotor
-	motor.inputMoveDirection = transform.rotation * directionVector;
+	motor.inputMoveDirection = DirXform.rotation * directionVector;
 	motor.inputJump = Input.GetButton("Jump");
 }
 
