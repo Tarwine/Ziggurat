@@ -49,7 +49,7 @@ public class playerInteract : MonoBehaviour {
 
 		//The following lines of code kill the player if he is in the air too long
 		//********************
-		SendMessage("getGrounded");
+		//SendMessage("getGrounded");
 
 		if(!isGrounded && !holding){
 			timez += Time.deltaTime;
@@ -158,7 +158,7 @@ public class playerInteract : MonoBehaviour {
 		}
 		if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetButtonDown("Select"))
 		{
-			OVRDevice.ResetOrientation(0);
+
 		}
 	}
 	public void inRange(GameObject rope){

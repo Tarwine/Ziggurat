@@ -30,10 +30,47 @@ public class MouseLookJoy : MonoBehaviour {
 	public float minimumY = -60F;
 	public float maximumY = 60F;
 
+	protected CharacterController Controller = null;
+	protected OVRCameraRig CameraController = null;
+	protected Transform DirXform = null;
+
 	float rotationY = 0F;
+
+	void Awake()
+	{
+		Controller = gameObject.GetComponent<CharacterController>();
+		
+		if(Controller == null)
+			Debug.LogWarning("OVRPlayerController: No CharacterController attached.");
+		
+		// We use OVRCameraRig to set rotations to cameras,
+		// and to be influenced by rotation
+		OVRCameraRig[] CameraControllers;
+		CameraControllers = gameObject.GetComponentsInChildren<OVRCameraRig>();
+		
+		if(CameraControllers.Length == 0)
+			Debug.LogWarning("OVRPlayerController: No OVRCameraRig attached.");
+		else if (CameraControllers.Length > 1)
+			Debug.LogWarning("OVRPlayerController: More then 1 OVRCameraRig attached.");
+		else
+			CameraController = CameraControllers[0];
+		
+		DirXform = transform.Find("ForwardDirection");
+		
+		if(DirXform == null)
+			Debug.LogWarning("OVRPlayerController: ForwardDirection game object not found. Do not use.");
+		
+		#if UNITY_ANDROID && !UNITY_EDITOR
+		OVRManager.display.RecenteredPose += ResetOrientation;
+		#endif
+	}
 
 	void Update ()
 	{
+		float hmdY = CameraController.centerEyeAnchor.localRotation.eulerAngles.y;
+		DirXform.rotation *= Quaternion.Euler(0.0f, hmdY, 0.0f);
+		rotationY = DirXform.rotation.y;
+
 		if (axes == RotationAxes.MouseXAndY)
 		{
 			float rotationX = transform.localEulerAngles.y + (Input.GetAxis("Mouse X") * sensitivityX) + (Input.GetAxis("JoyLookX") * sensitivityXJoy);
@@ -45,7 +82,8 @@ public class MouseLookJoy : MonoBehaviour {
 		}
 		else if (axes == RotationAxes.MouseX)
 		{
-			transform.Rotate(0, (Input.GetAxis("Mouse X") * sensitivityX) + (Input.GetAxis("JoyLookX") * sensitivityXJoy), 0);
+			transform.Rotate(0, (Input.GetAxis("Mouse X")* sensitivityX) + (Input.GetAxis("JoyLookX") * sensitivityXJoy), 0);
+
 		}
 		else
 		{

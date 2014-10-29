@@ -158,7 +158,7 @@ public class playerInteractFPS : MonoBehaviour {
 		}
 		if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetButtonDown("Select"))
 		{
-			OVRDevice.ResetOrientation(0);
+			//OVRDevice.ResetOrientation(0);
 		}
 	}
 	public void inRange(GameObject rope){

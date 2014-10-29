@@ -3,6 +3,11 @@ private var motor : CharacterMotor;
 // Use this for initialization
 function Awake () {
 	motor = GetComponent(CharacterMotor);
+	
+	DirXform = transform.Find("ForwardDirection");
+	
+	if(DirXform == null)
+		Debug.LogWarning("OVRPlayerController: ForwardDirection game object not found. Do not use.");
 }
 
 // Update is called once per frame
