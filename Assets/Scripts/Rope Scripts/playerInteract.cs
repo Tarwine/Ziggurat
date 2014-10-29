@@ -109,7 +109,7 @@ public class playerInteract : MonoBehaviour {
 			if(holding == true){
 				grabbedRope = null;
 				holding = false;
-				this.gameObject.GetComponentInChildren<HeadBobber>().enabled = true;
+//				this.gameObject.GetComponentInChildren<HeadBobber>().enabled = true;
 				SendMessage("SetVelocity", transform.forward * 10.0f);
 			}
 		}
@@ -162,7 +162,7 @@ public class playerInteract : MonoBehaviour {
 		}
 	}
 	public void inRange(GameObject rope){
-		this.gameObject.GetComponentInChildren<HeadBobber>().enabled = false;
+		//this.gameObject.GetComponentInChildren<HeadBobber>().enabled = false;
 		closestRope = rope;
 		ropeRange = true;
 	}
